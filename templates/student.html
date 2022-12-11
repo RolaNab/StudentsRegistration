@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+    <table>
+  <tr>
+    <th>Student ID</th>
+    <th>Full Name</th>
+    <th>Mobile Number</th>
+      <th>Age</th>
+      <th>Level</th>
+  </tr>
+{%for std in data%}
+        <tr>
+            <td>{{std.id}}</td>
+            <td>{{std.full_name}}</td>
+            <td>{{std.mobile_number}}</td>
+            <td>{{std.age}}</td>
+            <td>{{std.level}}</td>
+        </tr>
+{%endfor%}
+</table>
+
+
+</body>
+</html>
